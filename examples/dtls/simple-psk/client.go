@@ -12,7 +12,7 @@ func main() {
 		panic(err.Error())
 	}
 
-	req := canopus.NewRequest(canopus.MessageConfirmable, canopus.Get, canopus.GenerateMessageID())
+	req := canopus.NewRequestWithMessageId(canopus.MessageConfirmable, canopus.Get, canopus.GenerateMessageID())
 	req.SetStringPayload("Hello, canopus")
 	req.SetRequestURI("/hello")
 
